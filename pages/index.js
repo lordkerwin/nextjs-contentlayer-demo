@@ -22,11 +22,13 @@ const Index = ({ posts }) => {
               <span>{post.publishedAt}</span>
 
               {/* Loop through any tags if we have any */}
-              <ul>
-              {post.tags && post.tags.map((tag, i) => (
-                <li key={i}>{tag}</li>
-              ))}
-              </ul>
+              {post.tags && (
+                <ul>
+                  {post.tags.map((tag, i) => (
+                    <li key={i}>{tag}</li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             
